@@ -1,0 +1,38 @@
+/* Site Colors:
+	#1A446C - blue grey
+	#689DC1 - light blue
+	#D4E6F4 - very light blue
+	#EEE4B9 - light tan
+	#8D0D19 - burgundy
+*/
+
+
+/* Main Theme*/
+
+body,td,th {
+	color: #FFFFFF;
+}
+body {
+	background-image: url(images/bg7.jpg);
+	background-repeat: no-repeat;
+	background-color: #000000;
+	
+}
+a:link {
+	color: #FFFFFF;
+}
+a:visited {
+	color: #FFFFFF;
+}
+a:hover {
+	color: #FF0000;
+}
+
+
+#banners 
+{
+	position:absolute;
+	left:165px;	
+}
+
+

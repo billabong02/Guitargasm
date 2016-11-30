@@ -1,0 +1,30 @@
+﻿/* CSS Document */
+
+/* you need to use <span class="yourStyleName">Some text Bloc</span> inside the xml configuration file in the image html text area to format text blocks using your personal style definitions */
+/* css is only available for description text box not the title. To change the title font/size etc edit the title text field properties in Flash. */
+
+
+.yourStyleName {
+color: #ff0000;
+/*font-size: 12px;*/
+font-weight: bold;
+font-family: verdana;
+}
+
+.liStyle{
+font-size:8px;
+}
+
+a:link {
+color: #7b8ad5;
+}
+
+a:hover {
+color: #a5b3f5;
+text-decoration:underline;
+}
+
+
+/* this is just a demo style definition not used inside the configuration xml file - html text area */
+
+

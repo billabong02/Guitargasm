@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<appearance>
+		<object param="useRandomOrdering" value="0" />
+		<!--	
+			description: 		determines if the images should appear in a random order.
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the images appear in the order they are encountered in this xml file, if 1 - the image order is randomized	-->
+		<rollOverEffect>
+			<effect type="alpha" min="40" max="90">
+			<!--
+				identifier:			"type"
+				description: 		determines the type of the roll over effect.
+				type of value:		string
+				range of values: 	"alpha" or "blur"
+				
+				identifier:			"min"
+				description: 		determines the minimum value of the effect (when the item the further away)
+				type of value:		integer
+				range of values: 	0 to 100 for "alpha" and 0 to 8 for "blur" (recommended range)
+				
+				identifier:			"max"
+				description: 		determines the maximum value of the effect (when the item is closer)
+				type of value:		integer
+				range of values: 	0 to 100 for "alpha" and 0 to 8 for "blur" (recommended range)
+				
+				restrictions:		only one instance of each effect type may be used.
+			-->
+			</effect>
+			<effect type="blur" min="0" max="3" />
+		</rollOverEffect>
+		<logo type="image" src="carousel-images/stars_logo.png" width="150" height="150" yPos="0" xPos="0" link="http://www.flashtuning.net/" target="_self" >
+			<!--
+				identifier:			"type"
+				description: 		determines the type of the item.
+				type of value:		string
+				range of values: 	"image" or "swf" - for the moment, there's no difference between selecting either of them
+				
+				identifier:			"src"
+				description: 		determines the path to the file
+				type of value:		string (path)
+				range of values: 	path to existing file
+				
+				identifier:			"width"
+				description: 		the width of the logo 
+				type of value:		integer
+				range of values: 	1 to desired size
+				
+				identifier:			"height"
+				description: 		the height of the logo 
+				type of value:		integer
+				range of values: 	1 to desired size
+				
+				identifier:			"xPos"
+				description: 		the OX position of the logo relative to the center point
+				type of value:		integer
+				range of values: 	"-totalWidth" / 2 to totalWidth / 2 (recommended range)
+				
+				identifier:			"yPos"
+				description: 		the OY position of the logo relative to the center point
+				type of value:		integer
+				range of values: 	"-totalHeight" / 2 to totalHeight/ 2 (recommended range)
+				
+				identifier:			"link"
+				description: 		determines string data passed over to the browser each click
+				type of value:		string
+				range of values: 	either a http link or a javascript call (recommended range)
+				
+				identifier:			"target"
+				description: 		determines where to open the new link
+				type of value:		string
+				range of values: 	"_blank" - opens the link in a new window, "_self" - opens the link in the same window (use this for javascript), "_parent" - opens the link inside the parent window/frame when using frames, "_top" - opens the link in the top window
+			-->
+			<reflection alpha="80" distance="-10" percentage="50" direction="bottom">
+				<!--
+					identifier:			"alpha"
+					description: 		determines the transparency of the reflection
+					type of value:		integer (percentage)
+					range of values: 	0 to 100 (recommended range)
+					
+					identifier:			"distance"
+					description: 		determines the distance from the logo to the reflection
+					type of value:		integer (pixels)
+					range of values: 	0 to 50 (recommended range)
+					
+					identifier:			"percentage"
+					description: 		determines the how much of the logo is reflected
+					type of value:		integer (percentage)
+					range of values: 	0 to 100 (recommended range)
+					
+					identifier:			"direction"
+					description: 		determines the position of the reflection relative to the logo
+					type of value:		string
+					range of values: 	"top", "bottom", "left", "right"
+				-->
+			</reflection>
+		</logo>
+	</appearance>
+	<content>
+		<menuItem>
+			<media	type="image" src="carousel-images/p7.jpg"  minWidth="100"	minHeight="74"	zoomWidth="1.33"	zoomHeight="1.33"  link="http://www.flashtuning.net/" target="_self"/>
+				<!--
+					identifier:			"type"
+					description: 		determines the type of the item.
+					type of value:		string
+					range of values: 	"image" or "swf" - for the moment, there's no difference between selecting either of them
+					
+					identifier:			"src"
+					description: 		determines the path to the file
+					type of value:		string (path)
+					range of values: 	path to existing file
+					
+					identifier:			"minWidth"
+					description: 		the minimum width of the image
+					type of value:		integer (pixels)
+					range of values: 	1 to desired size
+					restrictions:		defaults to itemMinWidth from setup xml, if not defined
+					
+					identifier:			"minHeight"
+					description: 		the minimum height of the image 
+					type of value:		integer (pixels)
+					range of values: 	1 to desired size
+					restrictions:		defaults to itemMinHeight from setup xml, if not defined
+					
+					identifier:			"maxWidth"
+					description: 		the maximum width of the image
+					type of value:		integer (pixels)
+					range of values: 	1 to desired size
+					restrictions:		component defaults to using zoomWidth or itemMaxWidth, itemZoomWidth from setup xml, if not defined
+					
+					identifier:			"maxHeight"
+					description: 		the maximum height of the image 
+					type of value:		integer (pixels)
+					range of values: 	1 to desired size
+					restrictions:		component defaults to using zoomHeight or itemMaxHeight, itemZoomHeight from setup xml, if not defined
+					
+					identifier:			"zoomWidth"
+					description: 		width scaling factor for the images
+					type of value:		float (scale factor)
+					range of values: 	1 to 5 (recommended range) - this value is multiplied with the thumb minWidth, if the value resulted is higher than the actual image width the quality drops (since it's zoomed in)
+					restrictions:		if maxWidth is defined, this property has no effect
+					
+					identifier:			"zoomHeight"
+					description: 		height scaling factor for the images
+					type of value:		float (scale factor)
+					range of values: 	1 to 5 (recommended range) - this value is multiplied with the thumb minHeight, if the value resulted is higher than the actual image width the quality drops (since it's zoomed in)
+					restrictions:		if maxHeight is defined, this property has no effect
+				
+					identifier:			"link"
+					description: 		determines string data passed over to the browser each click
+					type of value:		string
+					range of values: 	either a http link or a javascript call (recommended range)
+					
+					identifier:			"target"
+					description: 		determines where to open the new link
+					type of value:		string
+					range of values: 	"_blank" - opens the link in a new window, "_self" - opens the link in the same window (use this for javascript), "_parent" - opens the link inside the parent window/frame when using frames, "_top" - opens the link in the top window
+				-->
+
+			<text	bkgndAlpha="70"		bkgndColor="0x000000">
+				<!--
+					text inside "<![CDATA[" tag will be shown in the tooltip
+					
+					identifier:			"bkgndAlpha"
+					description: 		determines the tooltip background transparency. It will not affect the tooltip border.
+					type of value:		integer (percentage)
+					range of values: 	0 to 100 (recommended range)
+					
+					identifier:			"bkgndColor"
+					description: 		determines the tooltip background color.
+					type of value:		string (hexadecimal number)
+					range of values: 	"0x000000" to "0xFFFFFF" (recommended range)
+				-->
+				<![CDATA[<p><font color="#FFFFFF" size="11" face="verdana"><font color="#FF6600"><b>FlashTuning</b></font> presents: <br/><b>X-treme Carousel Menu</b>!</font></p>]]>
+			</text>
+			<description>
+				<!--
+					text inside "<![CDATA[" tag will be shown in the description box
+				-->
+				<![CDATA[<p><font color="#003355" size="10" face="verdana">Description goes <b>here</b>!</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p2.jpg" link="http://www.flashtuning.net/" target="_blank"/>
+			<text	bkgndAlpha="90"		bkgndColor="0x333333">
+				<![CDATA[<p><font color="#EEF9FE" size="9" face="verdana">We highly appreciate any feedback!<br/> Comment, rate or email us!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#000000" size="10" face="verdana">No Flash editing needed!</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p3.jpg" link="http://www.flashtuning.net/" target="_blank"/>
+			<text>
+				<![CDATA[<p><font color="#EEF9FE" size="11" face="verdana">Fully customizable using <b>XML</b>!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#115432" size="11" face="verdana">Special characters support:<br/>©!&lt;&gt;ŒÆ»€âæèêíó!</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p4.jpg" link="http://www.flashtuning.net/" target="_blank"/>
+			<text>
+				<![CDATA[<p><font color="#EEF9FE" size="10" face="verdana">Among the features:<ul><li class="liStyle">buttons</li><li class="liStyle">description textboxes</li><li class="liStyle">FlashVars</li><li class="liStyle">highlighting</li><li class="liStyle">overshadows</li><li class="liStyle">randomizing</li><li class="liStyle">reflections</li><li class="liStyle">scrollbar</li><li class="liStyle">tooltips</li></ul></font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#000000" size="9" face="verdana">&nbsp;The position of the tooltip and the description box can be set from inside the xml.</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p8.jpg"	minWidth="100"	minHeight="74"	zoomWidth="1.33"	zoomHeight="1.33"  link="http://www.flashtuning.net/" target="_blank"/>
+			<text bkgndAlpha="90"		bkgndColor="0xDEF3FE">
+				<![CDATA[<p align="left"><font color="#5F7480" size="11" face="verdana">Not convinced?<br/>Download the free version <br/>and test it yourself!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p align="right"><font color="#000000" size="10" face="verdana">All the text can be formatted using html/<font color="#884444"><b>css</b></font>.</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p6.jpg"	link="http://www.flashtuning.net/faq" target="_blank" />
+			<text>
+				<![CDATA[<p align="center"><font color="#EEF9FE" size="11" face="verdana">Any questions?<br/>See the documentation or<br/> click to open the <br/><font size="12" color="#FFCC77"><b>FlashTuning</b></font> FAQ page.</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p align="left"><font color="#000000" size="10" face="verdana">If neither help, please email/contact us.</font></p>]]>
+			</description>
+		</menuItem>
+	</content>
+</settings>

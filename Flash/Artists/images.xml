@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slideshow>
+<photo image="images/01.jpg" url="Foo Fighters/Foo Fighters.html" target="_self" info="Foo Fighters"/>
+	
+<photo image="images/02.jpg" url="Linkin Park/linkin park.html" target="_self" info="Linkin Park"/>
+	
+<photo image="images/03.jpg" url="Avenged Sevenfold/Avenged Sevenfold.html" target="_self" info="Avenged Sevenfold"/>
+
+<photo image="images/04.jpg" url="Disturbed/disturbed.html" target="_self" info="Disturbed"/>
+
+<photo image="images/05.jpg" url="Breaking Benjamin/benjamin.html" target="_self" info="Breaking Benjamin"/>
+	
+<photo image="images/06.jpg" url="Stone Sour/stonesour.html" target="_self" info="Stone Sour"/>
+
+<photo image="images/07.jpg" url="Alter Bridge/alterbridge.html" target="_self" info="Alter Bridge"/>	
+	
+<photo image="images/08.jpg" url="POD/pod.html" target="_self" info="P.O.D."/>
+
+<photo image="images/09.jpg" url="Chevelle/chevelle.html" target="_self" info="Chevelle"/>
+
+<photo image="images/10.jpg" url="Creed/creed.html" target="_self" info="Creed"/>
+
+<photo image="images/11.jpg" url="Slipknot/slipknot.html" target="_self" info="Slipknot"/>
+
+</slideshow>

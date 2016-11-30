@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<object param="totalHeight" 				value="400" />
+	<!--	
+			description: 		the desired height of the movie clip mask
+			type of value:		integer (pixels)
+			range of values: 	1 to Stage height (recommended range)	-->
+	<object param="totalWidth" 					value="580" />
+	<!--	
+
+			description: 		the desired height of the movie clip mask
+			type of value:		integer (pixels)
+			range of values: 	1 to Stage width (recommended range)	-->
+	<object param="stageBorder"					value="10" />
+	<!--	
+			description: 		determines the size of an invisible border inside the stage (around the edges). Rolling over the border will be considered a mouse rollout event. This deals with the AS2 bug that reports the same mouse position ad infinitum everytime the mouse leaves the stage.
+			type of value:		integer (pixels)
+			range of values: 	10 to 30 (recommended range)	-->
+	<object param="contentXML"					value="carousel-content.xml" />
+	<!--	
+			description: 		path to the xml file with the content info. If missing it defaults to "carousel-content.xml".
+			type of value:		string (path)
+			range of values: 	"" or path to existing xml file.
+			restrictions: 		FlashVars contentXML takes priority over this property	-->
+
+	<!-- THUMB SIZES -->
+	<object param="itemMinWidth" 				value="100" />
+	<!--	
+			description: 		default minimum width of the images
+			type of value:		integer (pixels)
+			range of values: 	1 to image width (recommended range)	
+			restrictions:		the minWidth properties inside the content xml overrides this one	-->
+	<object param="itemMinHeight" 				value="74" />
+	<!--	
+			description: 		default minimum height of the images
+			type of value:		integer (pixels)
+			range of values: 	1 to image height (recommended range)	
+			restrictions:		the minHeight properties inside the content xml overrides this one	-->
+			
+	<!-- MAX THUMB SIZES -->
+	<object param="itemMaxWidth" 				value="133" />
+	<!--	
+			description: 		default maximum width of the images
+			type of value:		integer (pixels)
+			range of values: 	minWidth to image width (recommended range)	
+			restrictions:		the maxWidth, zoomWidth properties inside the content xml override this one	-->
+	<object param="itemMaxHeight" 				value="98" />
+	<!--	
+			description: 		default maximum height of the images
+			type of value:		integer (pixels)
+			range of values: 	minHeight to image height (recommended range)	
+			restrictions:		the minHeight, zoomHeight properties inside the content xml override this one	-->
+			
+	<!-- ZOOM SCALING FACTORS -->
+	<!-- THE FOLLOWING 2 PROPERTIES CAN BE UNCOMMENTED - itemMaxWidth and itemMaxHeight will have higher priority, so you need to comment/delete those -->
+	<!-- <object param="itemZoomWidth" 				value="1.4" /> -->
+	<!--	
+			description: 		default width scaling factor for the images
+			type of value:		float (scale factor)
+			range of values: 	1 to 5 (recommended range) - this value is multiplied with the thumb minWidth, if the value resulted is higher than the actual image width the quality drops (since it's zoomed in)
+			restrictions:		the maxWidth, zoomWidth properties inside the content xml and itemMaxWidth override this one	-->
+	<!-- <object param="itemZoomHeight" 			value="2" /> -->
+	<!--	
+			description: 		default height scaling factor for the images
+			type of value:		float (scale factor)
+			range of values: 	1 to 5 (recommended range) - this value is multiplied with the thumb minHeight, if the value resulted is higher than the actual image width the quality drops (since it's zoomed in)
+			restrictions:		the minHeight, zoomHeight properties inside the content xml and itemMaxHeight override this one	-->
+		
+	<!-- POSITIONING PROPERTIES -->
+	<object param="centerX" 					value="290" />
+	<!--	
+			description: 		the OX position of the the center of the carousel
+			type of value:		integer (pixels)
+			range of values: 	0 to totalWidth (recommended range)	-->
+	<object param="centerY" 					value="150" />
+	<!--	
+			description: 		the OY position of the the center of the carousel
+			type of value:		integer (pixels)
+			range of values: 	0 to totalWidth (recommended range)	-->
+	<object param="radiusX" 					value="250" />
+	<!--	
+			description: 		the carousel OX radius
+			type of value:		integer (pixels)
+			range of values: 	0 to totalWidth/2 (recommended range)	-->
+	<object param="radiusY" 					value="50" /> 	
+	<!--	
+			description: 		the carousel OY radius
+			type of value:		integer (pixels)
+			range of values: 	0 to totalHeight/2 (recommended range)	-->
+	<object param="zAngle" 						value="0" /> 	
+	<!--	
+			description: 		the OZ angle of the carousel
+			type of value:		integer (degrees)
+			range of values: 	0 to 359 (recommended range)	-->
+	<object param="itemAlignmentOX" 			value="center" />
+	<!--	
+			description: 		the OX alignment of the images (modify this when the carousel is not horizontal)
+			type of value:		string
+			range of values: 	"center", "left", "right"	-->
+	<object param="itemAlignmentOY" 			value="center" /> 	
+	<!--	
+			description: 		the OY alignment of the images (modify this when the carousel is not vertical)
+			type of value:		string
+			range of values: 	"center", "top", "bottom"	-->
+			
+	<!-- SPEED AND MOVEMENT PROPERTIES -->
+	<object param="baseSpeed"	 				value="0.75" />
+	<!--	
+			description: 		the minimum speed of the carousel
+			type of value:		float (pixels)
+			range of values: 	0 to |maxSpeed| (recommended range) - |x| is the absolute value of x	-->
+	<object param="maxSpeed" 					value="-5" />
+	<!--	
+			description: 		the maximum speed of the carousel (can be negative - the sign determines the direction)
+			type of value:		float (pixels)
+			range of values: 	"-15" to "15" (recommended range) -->
+	<object param="keepSpeedOnRollOut"			value="1" />
+	<!--	
+			description: 		determines whether the current speed is reset to baseSpeed every time the mouse roll out of an image
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the carousel speed resets to baseSpeed on rollout, if 1 - the carousel maintains speed on roll out	-->
+	<object param="stopOnHover" 				value="0" />
+	<!--	
+			description: 		determines whether the carousel stops when the mouse is over an image
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the carousel doesn't stop on rollover, if 1 - the carousel stops on rollover	-->
+	<object param="centerZone"					value="0" />
+	<!--	
+			description: 		determines the center arc in which the mouse is deemed inactive (the speed is 0)
+			type of value:		integer (degrees)
+			range of values: 	0 to 90 (recommended range) - if 0 - the carousel doesn't stop on rollover, if 1 - the carousel stops on rollover	-->
+	<object param="mouseOverReflection"			value="0" />
+	<!--	
+			description: 		determines if rolling the mouse over the reflections activates the roll over event (graphical effects + showing tooltip and description)
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - rolling over reflections will be eventless, if 1 - rolling over reflections will activate the image (if the reflection is over another image, the image will have priority over the rollover event)	-->
+
+	<!-- SCROLLBAR PROPERTIES -->
+    <object param="scrollBarAlpha" 				value="100" />
+	<!--	
+			description: 		determines how transparent the scrollbar is
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range) - if 0 - the scrollbar is disabled	-->
+    <object param="scrollBarScrollMode" 		value="1" />
+	<!--	
+			description: 		selects the scroll mode of the scrollbar
+			type of value:		integer
+			range of values: 	0 or 1 (recommended range) - if 0 - the scrollbar will scroll through each item separately (snapping to each one), if 1 - the scrollbar will control the carousel rotation directly	-->
+	<object param="scrollBarSliderSize" 		value="0" />
+	<!--	
+			description: 		determines the scrollbar slider width (percentage of the scrollBarWidth)
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range) - if scrollBarSliderSize < 10 - the value defaults to 1/N (N - number of images) -->
+	<object param="scrollBarWidth"				value="460" />
+	<!--	
+			description: 		determines the scrollbar width
+			type of value:		integer (pixels)
+			range of values: 	50 to totalWidth (recommended range) - if the scrollbar is outside the component boundaries, it will not function -->
+	<object param="scrollBarX" 					value="60" />
+	<!--	
+			description: 		determines the scrollbar OX position
+			type of value:		integer (pixels)
+			range of values: 	0 to totalWidth (recommended range) - if the scrollbar is outside the component boundaries, it will not function -->
+	<object param="scrollBarY" 					value="330" />
+	<!--	
+			description: 		determines the scrollbar OY position
+			type of value:		integer (pixels)
+			range of values: 	0 to totalHeight (recommended range) - if the scrollbar is outside the component boundaries, it will not function -->
+	<object param="scrollBarHorizontal"			value="1" />
+	<!--	
+			description: 		determines whether the scrollbar is horizontal or vertical
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the scrollbar is vertical, if 0 - the scrollbar is horizontal	-->
+	<object param="mouseClickSpeed"				value="100" />
+	<!--	
+			description: 		if the mouse pressed and released faster than mouseClickSpeed milliseconds, the action is considered a click rather than a dragging event (affects the scrollbar slider click event)
+			type of value:		integer (milliseconds)
+			range of values: 	100 to 300 (recommended range)	
+			restrictions:		only applies when scrollBarScrollMode is "1"	-->
+	<object param="startDraggingAngPrec"		value="10" />
+	<!--	
+			description: 		determines the error margin for the scrollbar slider dragging event. if the carousel is moved less than startDraggingAngPrec the mouse click event is considered over the slider
+			type of value:		integer (degrees)
+			range of values: 	0 to 10 (recommended range)	- don't modify this unless you're experiencing problems with dragging the scrollbar slider
+			restrictions:		only applies when scrollBarScrollMode is "1"	-->
+			
+	<!-- BUTTON PROPERTIES -->
+	<object param="showButtons"					value="1" />
+	<!--	
+			description: 		default the use of buttons
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the buttons are disabled and aren't shown, if 1 - the buttons are enabled -->
+	<object param="button1XPos"					value="0" />
+	<!--
+			description: 		the OX position of the left button
+			type of value:		integer (pixels)
+			range of values: 	0 to totalWidth (recommended range) -->
+	<object param="button1YPos"					value="10" />
+	<!--
+			description: 		the OY position of the left button
+			type of value:		integer (pixels)
+			range of values: 	0 to totalHeight (recommended range) -->	
+	<object param="button2XPos"					value="551" />
+	<!--
+			description: 		the OX position of the right button
+			type of value:		integer (pixels)
+			range of values: 	0 to totalWidth (recommended range) -->	
+	<object param="button2YPos"					value="10" />
+	<!--
+	
+			description: 		the OY position of the right button
+			type of value:		integer (pixels)
+			range of values: 	0 to totalHeight (recommended range) -->
+	<object param="buttonScrollMode"			value="1" />
+	<!--	
+			description: 		selects the scroll mode of the buttons (0 - iterative, 1 - continuous)
+			type of value:		integer
+			range of values: 	0 or 1 (recommended range) - if 0 - each press of a button will bring to the closest coresponding image to foreground, if 1 - each press will accelerate the carousel towards buttonSpeed	-->
+	<object param="buttonSpeed"					value="20" />
+	<!--
+			description: 		the speed used for rotating the component when the buttons are used by the user
+			type of value:		float (pixels)
+			range of values: 	-20 to 20 (recommended range) - the buttonSpeed sign affects the direction of the rotation
+			restrictions:		only applies when buttonsScrollMode is "1" -->
+	<object param="zAngleButtons"				value="0" />
+	<!--	
+			description: 		determines whether to apply the zAngle rotation to the buttons
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the buttons will be aligned horizontally, if 1 - the buttons will be rotated zAngle degrees -->
+	<object param="buttonMoveOnHover"			value="1" />
+	<!--	
+			description: 		determines whether the buttons work when the mouse hovers over, or when the user clicks them
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the mouse only need to hover over to activate them, if 1 - the user needs to click them to activate them	-->
+	
+	<!-- IMAGE BORDER PROPERTIES -->
+	<object param="borderAlpha"					value="50" />
+	<!--	
+			description: 		determines the border transparency
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="borderColor"					value="0x333333" />
+	<!--	
+			description: 		determines the border color
+			type of value:		string (hexadecimal number)
+			range of values: 	"0x000000" to "0xFFFFFF" (recommended range)	-->
+	<object param="borderSize"					value="3" />
+	<!--	
+			description: 		determines the border size
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range) - the size is applied when the image is at max width and height	-->
+			
+	<!-- OVERSHADOW PROPERTIES -->
+	<object param="overShadowAlpha"				value="60" />
+	<!--	
+			description: 		determines the overshadow transparency
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="overShadowColor"				value="0xaaaaaa" />
+	<!--	
+			description: 		determines the overshadow color
+			type of value:		string (hexadecimal number)
+			range of values: 	"0x000000" to "0xFFFFFF" (recommended range)	-->
+			
+	<!-- IMAGE HIGHLIGHTING PROPERTIES -->
+	<object param="useRollOverColoring"			value="1" />
+	<!--	
+			description: 		determines whether the images are highlighted
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the images aren't highlighted on rollover, if 1 - the images are highlighted on rollover	-->
+	<object param="rollOverColorIntensity"		value="55" />
+	<!--	
+			description: 		determines the color intensity while mouse cursor is over the item
+			type of value:		integer
+			range of values: 	"-100" to "100" (recommended range)	-->
+	<object param="rollOutColorIntensity"		value="-15" />
+	<!--	
+			description: 		determines the color intensity while mouse cursor is not over the item (initial value)
+			type of value:		integer
+			range of values: 	"-100" to 100 (recommended range)	-->
+	<object param="coloringSpeed"				value="5" />
+	<!--	
+			description: 		determines the rate at which the color intesity is shifted from color between intensity rollOutColorIntensity and rollOverColorIntensity.
+			type of value:		integer
+			range of values: 	1 to 20 (recommended range) - the value is added each frame so the effect depends on the framerate	-->
+	
+	<!-- REFLECTION PROPERTIES -->
+	<object param="reflectAlpha"				value="15" />
+	<!--	
+			description: 		determines the reflection transparency. The reflection alpha will also affect the overshadow movieclip over the reflection, making it more transparent.
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="reflectDistance"				value="5" />
+	<!--	
+			description: 		determines distance from the original image to the reflection.
+			type of value:		integer (pixels)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="reflectPercentage"			value="60" />
+	<!--	
+			description: 		determines the size of the reflection - percentage out of the full image width/height
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="reflectDirection"			value="bottom" />
+	<!--	
+			description: 		determines the position of the reflection relative to the original image
+			type of value:		string
+			range of values: 	"top", "bottom", "left", "right"	-->
+	
+	<!-- TOOLTIP PROPERTIES -->
+	<object param="useTooltip"					value="1" />
+	<!--	
+			description: 		determines whether to display the tooltip.
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the tooltip feature will be disabled, if 1 - the tooltip feature is enabled	-->
+	<object param="tooltipAlpha"				value="80" />
+	<!--	
+			description: 		determines the tooltip background transparency. It will not affect the tooltip border.
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="tooltipColor"				value="0x88a6b7" />
+	<!--	
+			description: 		determines the tooltip background color.
+			type of value:		string (hexadecimal number)
+			range of values: 	"0x000000" to "0xFFFFFF" (recommended range)	-->
+	<object param="tooltipCornerRadius"			value="4" />
+	<!--	
+			description: 		determines how much the corners are rounded.
+			type of value:		integer (pixels)
+			range of values: 	0 to half the tooltip minimum size - if 0 - the tooltip will have square corners, if > 0 - the tooltip corners are rounded	-->
+	<object param="tooltipWidth"				value="-1" />
+	<!--	
+			description: 		determines the tooltip text box size (does not include padding and border sizes).
+			type of value:		integer (pixels)
+			range of values: 	"-1" to desired size - if "-1" - the tooltip will autosize depending on its content, if > 0 - the tooltip will apply the size constraints	-->
+			
+		<!-- TOOLTIP BORDER PROPERTIES-->
+	<object param="tooltipBorderAlpha"			value="100" />
+	<!--	
+			description: 		determines the tooltip border transparency.
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="tooltipBorderColor"			value="0xa4a27c" />
+	<!--	
+			description: 		determines the tooltip border color.
+			type of value:		string (hexadecimal number)
+			range of values: 	"0x000000" to "0xFFFFFF" (recommended range)	-->
+	<object param="tooltipBorderSize"			value="2" />
+	<!--	
+			description: 		determines the tooltip border size.
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range)	-->
+	<object param="tooltipUseRoundBorder"		value="1" />
+	<!--	
+			description: 		determines whether the border should have round or square corners.
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the tooltip border corners will be square (the background corners are determined by tooltipCornerRadius), if 1 - the tooltip will try to round the border corners depending on the tooltipCornerRadius	-->
+			
+		<!-- TOOLTIP POSITIONING PROPERTIES-->
+	<object param="tooltipPosition"				value="bl" />
+	<!--	
+			description: 		the default position of the tooltip in relation to the mouse pointer.
+			type of value:		string 
+			range of values: 	"topleft", "topcenter", "topright", "centerleft", "centercenter", "centerright", "bottomleft", "bottomcenter", "bottomright" or the abbreviations: "tl", "tc", "tr", "cl", "cc", "cr", "bl", "bc", "br".
+			restrictions:		if tooltipForcePosition is "0" the tooltip will try to remain within the component - this may change its default position. if no position is completely within the component, it will default to the closest one.	-->
+	<object param="tooltipForcePosition"		value="0" />
+	<!--	
+			description: 		determines whether the tooltip can change its default position to remain within component boundaries.
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the tooltip will try to remain inside the component, if 1 - the tooltip doesn't change its default position to avoid getting offscreen	-->
+	<object param="tooltipMouseHDistance"		value="5" />
+	<!--	
+			description: 		determines the horizontal distance from the mouse pointer to the tooltip.
+			type of value:		integer (pixels)
+			range of values: 	0 to 20 (recommended range)	-->
+	<object param="tooltipMouseVDistance"		value="10" />
+	<!--	
+			description: 		determines the vertical distance from the mouse pointer to the tooltip.
+			type of value:		integer (pixels)
+			range of values: 	0 to 20 (recommended range)	-->
+	<object param="tooltipLeftPadding"			value="5" />
+	<!--	
+			description: 		determines the horizontal distance from tooltip's edge to the text inside it.
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range)	-->
+	<object param="tooltipTopPadding"			value="5" />
+	<!--	
+			description: 		determines the vertical distance from tooltip's edge to the text inside it.
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range)	-->
+			
+		<!-- TOOLTIP ANIMATION PROPERTIES -->
+	<object param="tooltipTransitionType"		value="cubic" />
+	<!--	
+			description: 		along with tooltipTransitionMethod, determines the tooltip's fade in animation transition.
+			type of value:		string
+			range of values: 	"back", "bounce", "circ", "cubic", "elastic", "expo", "linear", "quad", "quart", "quint", "sine" - for a more detailed view of these types of transitions you can visit http://hosted.zeh.com.br/tweener/docs/en-us/
+			restrictions:		some transitions may break the component. test carefully!			-->
+	<object param="tooltipTransitionMethod"		value="easeOut" />
+	<!--	
+			description: 		along with tooltipTransitionType, determines the tooltip's fade in animation transition.
+			type of value:		string
+			range of values: 	"easeIn", "easeOut", "easeInOut", "easeOutIn" - for a more detailed view of these types of transitions you can visit http://hosted.zeh.com.br/tweener/docs/en-us/
+			restrictions:		for the "linear" type no ease function is available. some transitions may break the component. test carefully!	-->
+	<object param="tooltipDuration"				value="0.7" />
+	<!--	
+			description: 		determines the tooltip's fade in transition duration.
+			type of value:		float (seconds)
+			range of values: 	0 to 2 (recommended range)	-->
+	<object param="tooltipDelay"				value="0" />
+	<!--	
+			description: 		determines the tooltip's fade in transition delay.
+			type of value:		float (seconds)
+			range of values: 	0 to 2 (recommended range)	-->
+	<object param="tooltipAnimation"			value="zbc" />
+	<!--	
+			description: 		determines the position and type of fade in animation the tooltip will use.
+			type of value:		string
+			range of values: 	"moveTop", "moveBottom", "moveLeft", "moveRight", "moveAlpha", "zoomTopLeft", "zoomTopCenter", "zoomTopRight", "zoomCenterLeft", "zoomCenterCenter", "zoomCenterRight", "zoomBottomLeft", "zoomBottomCenter", "zoomBottomRight" or the abreviations (for example "zoomTopLeft" = "ztl")	-->
+	<object param="tooltipEmbeddedFont"			value="font_Default" />
+	<!--	
+			description: 		the font linkaged id used by the tooltip.
+			type of value:		string
+			range of values: 	"" or the linkage id of a font object inside the library	-->
+	<object param="tooltipCSS"					value="css/style.css" />
+	<!--	
+			description: 		the path to the css file used by the tooltip.
+			type of value:		string (path)
+			range of values: 	"" or path to existing css file	-->
+	
+	<!-- DESCRIPTION BOX PROPERTIES -->
+	<object param="showDescription"				value="1" />
+	<!--	
+			description: 		determines whether to display the description box.
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the description box feature will be disabled, if 1 - the description box feature is enabled	-->
+	<object param="descriptionAlpha"			value="90" />
+	<!--	
+			description: 		determines the description box background transparency. It will not affect the border.
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="descriptionColor"			value="0xcccccc" />
+	<!--	
+			description: 		determines the description box background color.
+			type of value:		string (hexadecimal number)
+			range of values: 	"0x000000" to "0xFFFFFF" (recommended range)	-->
+	<object param="descriptionCornerRadius"		value="1" />
+	<!--	
+			description: 		determines how much the description box corners are rounded.
+			type of value:		integer (pixels)
+			range of values: 	0 to half the description box minimum size - if 0 - the description box will have square corners, if > 0 - the description box corners are rounded	-->
+	<object param="descriptionTextWidth"		value="130" />
+	<!--	
+			description: 		determines the description box textfield size (does not include padding and border sizes).
+			type of value:		integer (pixels)
+			range of values: 	"-1" to desired size - if "-1" - the description box will autosize depending on its content, if > 0 - the description box will apply the size constraints	-->
+	<object param="descriptionTextAlpha"		value="100" />
+	<!--	
+			description: 		determines the alpha of the text inside the description box.
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)
+			restrictions:		only applies when descriptionEmbeddedFont is not ""	-->
+
+		<!-- DESCRIPTION BOX BORDER PROPERTIES-->
+	<object param="descriptionBorderAlpha"		value="100" />
+	<!--	
+			description: 		determines the description box border transparency.
+			type of value:		integer (percentage)
+			range of values: 	0 to 100 (recommended range)	-->
+	<object param="descriptionBorderColor"		value="0xefefef" />
+	<!--	
+			description: 		determines the description box border color.
+			type of value:		string (hexadecimal number)
+			range of values: 	"0x000000" to "0xFFFFFF" (recommended range)	-->
+	<object param="descriptionBorderSize"		value="3" />
+	<!--	
+			description: 		determines the description box border size.
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range)	-->
+	<object param="descriptionUseRoundBorder"	value="1" />
+	<!--	
+			description: 		determines whether the border should have round or square corners.
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - the description box border corners will be square (the background corners are determined by descriptionCornerRadius), if 1 - the description box will try to round the border corners depending on the descriptionCornerRadius	-->
+		
+		<!-- DESCRIPTION BOX POSITIONING PROPERTIES-->
+	<object param="descriptionPositionX"		value="-1" />
+	<!--	
+			description: 		determines the description box OX position.
+			type of value:		integer (pixels)
+			range of values: 	"-1" to desired position - if "-1" - the description box will center itself	-->
+	<object param="descriptionPositionY"		value="-1" />
+	<!--	
+			description: 		determines the description box OY position.
+			type of value:		integer (pixels)
+			range of values: 	"-1" to desired position - if "-1" - the description box will allign itself to the bottom of the component	-->
+	<object param="descriptionCentered"			value="1" />
+	<!--	
+			description: 		determines how the descriptionPositionX and descriptionPositionY are interpetreted
+			type of value:		integer (boolean)
+			range of values: 	0 or 1 (recommended range) - if 0 - x, y position refers to the top left corner (0,0), if 1 - the movieclip is centered (x,y position will represent its center)	-->
+	<object param="descriptionTopPadding"		value="3" />
+	<!--	
+			description: 		determines the vertical distance from the edge of the description box to the text inside it.
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range)	-->
+	<object param="descriptionLeftPadding"		value="2" />
+	<!--	
+			description: 		determines the horizontal distance from the edge of the description box to the text inside it.
+			type of value:		integer (pixels)
+			range of values: 	0 to 10 (recommended range)	-->
+		
+		<!-- DESCRIPTION BOX ANIMATION PROPERTIES -->
+	<object param="descriptionTransition"		value="fade" />
+	<!--	
+			description: 		determines type of transition the description box uses for changing information.
+			type of value:		string
+			range of values: 	"none" or "fade". for "none" it will remain visible even if nothing is displayed	-->
+	<object param="descriptionTransitionSpeed"	value="1" />
+	<!--	
+			description: 		determines the description box transition duration.
+			type of value:		float (seconds)
+			range of values: 	0 to 2 (recommended range)	-->
+	<object param="descriptionEmbeddedFont"		value="font_Default" />
+	<!--	
+			description: 		the font linkaged id used by the description box.
+			type of value:		string
+			range of values: 	"" or the linkage id of a font object inside the library	-->
+	<object param="descriptionCSS"				value="css/style.css" />
+	<!--	
+			description: 		the path to the css file used by the description box.
+			type of value:		string (path)
+			range of values: 	"" or path to existing css file	-->	
+</settings>

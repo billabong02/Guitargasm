@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<object param="totalHeight" 				value="400" />
+	<object param="totalWidth" 					value="580" />
+	<object param="stageBorder"					value="10" />
+	<object param="contentXML"					value="carousel-content.xml" />
+
+	<!-- THUMB SIZES -->
+	<object param="itemMinWidth" 				value="100" />
+	<object param="itemMinHeight" 				value="74" />
+
+	<!-- MAX THUMB SIZES -->
+	<object param="itemMaxWidth" 				value="133" />
+	<object param="itemMaxHeight" 				value="98" />
+			
+	<!-- ZOOM SCALING FACTORS -->
+	<!-- THE FOLLOWING 2 PROPERTIES CAN BE UNCOMMENTED - itemMaxWidth and itemMaxHeight will have higher priority, so you need to comment/delete those -->
+	<!-- <object param="itemZoomWidth" 				value="1.4" /> -->
+	<!-- <object param="itemZoomHeight" 			value="2" /> -->
+		
+	<!-- POSITIONING PROPERTIES -->
+	<object param="centerX" 					value="290" />
+	<object param="centerY" 					value="150" />
+	<object param="radiusX" 					value="250" />
+	<object param="radiusY" 					value="50" /> 	
+	<object param="zAngle" 						value="0" /> 	
+	<object param="itemAlignmentOX" 			value="center" />
+	<object param="itemAlignmentOY" 			value="center" /> 	
+			
+	<!-- SPEED AND MOVEMENT PROPERTIES -->
+	<object param="baseSpeed"	 				value="0.75" />
+	<object param="maxSpeed" 					value="-8" />
+	<object param="keepSpeedOnRollOut"			value="1" />
+	<object param="stopOnHover" 				value="0" />
+	<object param="centerZone"					value="0" />
+	<object param="mouseOverReflection"			value="0" />
+
+	<!-- SCROLLBAR PROPERTIES -->
+    <object param="scrollBarAlpha" 				value="100" />
+    <object param="scrollBarScrollMode" 		value="1" />
+	<object param="scrollBarSliderSize" 		value="0" />
+	<object param="scrollBarWidth"				value="460" />
+	<object param="scrollBarX" 					value="60" />
+	<object param="scrollBarY" 					value="330" />
+	<object param="scrollBarHorizontal"			value="1" />
+	<object param="mouseClickSpeed"				value="100" />
+	<object param="startDraggingAngPrec"		value="10" />
+
+	<!-- BUTTON PROPERTIES -->
+	<object param="showButtons"					value="1" />
+	<object param="button1XPos"					value="200" />
+	<object param="button1YPos"					value="10" />
+	<object param="button2XPos"					value="350" />
+	<object param="button2YPos"					value="10" />
+	<object param="buttonScrollMode"			value="1" />
+	<object param="buttonSpeed"					value="20" />
+	<object param="zAngleButtons"				value="0" />
+	<object param="buttonMoveOnHover"			value="1" />
+	
+	<!-- IMAGE BORDER PROPERTIES -->
+	<object param="borderAlpha"					value="50" />
+	<object param="borderColor"					value="0x333333" />
+	<object param="borderSize"					value="3" />
+
+	<!-- OVERSHADOW PROPERTIES -->
+	<object param="overShadowAlpha"				value="60" />
+	<object param="overShadowColor"				value="0xaaaaaa" />
+
+	<!-- IMAGE HIGHLIGHTING PROPERTIES -->
+	<object param="useRollOverColoring"			value="1" />
+	<object param="rollOverColorIntensity"		value="55" />
+	<object param="rollOutColorIntensity"		value="-15" />
+	<object param="coloringSpeed"				value="5" />
+
+	<!-- REFLECTION PROPERTIES -->
+	<object param="reflectAlpha"				value="15" />
+	<object param="reflectDistance"				value="5" />
+	<object param="reflectPercentage"			value="60" />
+	<object param="reflectDirection"			value="bottom" />
+	
+	<!-- TOOLTIP PROPERTIES -->
+	<object param="useTooltip"					value="1" />
+	<object param="tooltipAlpha"				value="80" />
+	<object param="tooltipColor"				value="0x88a6b7" />
+	<object param="tooltipCornerRadius"			value="4" />
+	<object param="tooltipWidth"				value="-1" />
+			
+		<!-- TOOLTIP BORDER PROPERTIES-->
+	<object param="tooltipBorderAlpha"			value="100" />
+	<object param="tooltipBorderColor"			value="0xa4a27c" />
+	<object param="tooltipBorderSize"			value="2" />
+	<object param="tooltipUseRoundBorder"		value="1" />
+			
+		<!-- TOOLTIP POSITIONING PROPERTIES-->
+	<object param="tooltipPosition"				value="bl" />
+	<object param="tooltipForcePosition"		value="0" />
+	<object param="tooltipMouseHDistance"		value="5" />
+	<object param="tooltipMouseVDistance"		value="10" />
+	<object param="tooltipLeftPadding"			value="5" />
+	<object param="tooltipTopPadding"			value="5" />
+			
+		<!-- TOOLTIP ANIMATION PROPERTIES -->
+	<object param="tooltipTransitionType"		value="cubic" />
+	<object param="tooltipTransitionMethod"		value="easeOut" />
+	<object param="tooltipDuration"				value="0.7" />
+	<object param="tooltipDelay"				value="0" />
+	<object param="tooltipAnimation"			value="zbc" />
+	<object param="tooltipEmbeddedFont"			value="font_Default" />
+	<object param="tooltipCSS"					value="css/style.css" />
+	
+	<!-- DESCRIPTION BOX PROPERTIES -->
+	<object param="showDescription"				value="1" />
+	<object param="descriptionAlpha"			value="90" />
+	<object param="descriptionColor"			value="0xcccccc" />
+	<object param="descriptionCornerRadius"		value="1" />
+	<object param="descriptionTextWidth"		value="130" />
+	<object param="descriptionTextAlpha"		value="100" />
+
+		<!-- DESCRIPTION BOX BORDER PROPERTIES-->
+	<object param="descriptionBorderAlpha"		value="100" />
+	<object param="descriptionBorderColor"		value="0xefefef" />
+	<object param="descriptionBorderSize"		value="3" />
+	<object param="descriptionUseRoundBorder"	value="1" />
+		
+		<!-- DESCRIPTION BOX POSITIONING PROPERTIES-->
+	<object param="descriptionPositionX"		value="-1" />
+	<object param="descriptionPositionY"		value="-1" />
+	<object param="descriptionCentered"			value="1" />
+	<object param="descriptionTopPadding"		value="3" />
+	<object param="descriptionLeftPadding"		value="2" />
+		<!-- DESCRIPTION BOX ANIMATION PROPERTIES -->
+	<object param="descriptionTransition"		value="fade" />
+	<object param="descriptionTransitionSpeed"	value="1" />
+	<object param="descriptionEmbeddedFont"		value="font_Default" />
+	<object param="descriptionCSS"				value="css/style.css" />
+</settings>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<appearance>
+		<object param="useRandomOrdering" value="0" />
+		<rollOverEffect>
+			<effect type="alpha" min="40" max="90"/>
+			<effect type="blur" min="0" max="3" />
+		</rollOverEffect>
+		<logo type="image" src="carousel-images/stars_logo.png" width="150" height="150" yPos="0" xPos="0" link="http://www.flashtuning.net/" target="_self" >
+			<reflection alpha="80" distance="-10" percentage="50" direction="bottom"/>
+		</logo>
+	</appearance>
+	<content>
+		<menuItem>
+			<media	type="image" src="carousel-images/p7.jpg"  minWidth="100"	minHeight="74"	zoomWidth="1.33"	zoomHeight="1.33"  link="http://www.flashtuning.net/" target="_self"/>
+			<text	bkgndAlpha="70"		bkgndColor="0x000000">
+				<![CDATA[<p><font color="#FFFFFF" size="11" face="verdana"><font color="#FF6600"><b>FlashTuning</b></font> presents: <br/><b>X-treme Carousel Menu</b>!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#003355" size="10" face="verdana">Description goes <b>here</b>!</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p2.jpg" link="http://www.flashtuning.net/" target="_blank"/>
+			<text	bkgndAlpha="90"		bkgndColor="0x333333">
+				<![CDATA[<p><font color="#EEF9FE" size="9" face="verdana">We highly appreciate any feedback!<br/> Comment, rate or email us!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#000000" size="10" face="verdana">No Flash editing needed!</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p3.jpg" link="http://www.flashtuning.net/" target="_blank"/>
+			<text>
+				<![CDATA[<p><font color="#EEF9FE" size="11" face="verdana">Fully customizable using <b>XML</b>!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#115432" size="11" face="verdana">Special characters support:<br/>©!&lt;&gt;ŒÆ»€âæèêíó!</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p4.jpg" link="http://www.flashtuning.net/" target="_blank"/>
+			<text>
+				<![CDATA[<p><font color="#EEF9FE" size="10" face="verdana">Among the features:<ul><li class="liStyle">buttons</li><li class="liStyle">description textboxes</li><li class="liStyle">FlashVars</li><li class="liStyle">highlighting</li><li class="liStyle">overshadows</li><li class="liStyle">randomizing</li><li class="liStyle">reflections</li><li class="liStyle">scrollbar</li><li class="liStyle">tooltips</li></ul></font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p><font color="#000000" size="9" face="verdana">&nbsp;The position of the tooltip and the description box can be set from inside the xml.</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p8.jpg"	minWidth="100"	minHeight="74"	zoomWidth="1.33"	zoomHeight="1.33"  link="http://www.flashtuning.net/" target="_blank"/>
+			<text bkgndAlpha="90"		bkgndColor="0xDEF3FE">
+				<![CDATA[<p align="left"><font color="#5F7480" size="11" face="verdana">Not convinced?<br/>Download the free version <br/>and test it yourself!</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p align="right"><font color="#000000" size="10" face="verdana">All the text can be formatted using html/<font color="#884444"><b>css</b></font>.</font></p>]]>
+			</description>
+		</menuItem>
+		<menuItem>
+			<media	type="image"	src="carousel-images/p6.jpg"	link="http://www.flashtuning.net/faq" target="_blank" />
+			<text>
+				<![CDATA[<p align="center"><font color="#EEF9FE" size="11" face="verdana">Any questions?<br/>See the documentation or<br/> click to open the <br/><font size="12" color="#FFCC77"><b>FlashTuning</b></font> FAQ page.</font></p>]]>
+			</text>
+			<description>
+				<![CDATA[<p align="left"><font color="#000000" size="10" face="verdana">If neither help, please email/contact us.</font></p>]]>
+			</description>
+		</menuItem>
+	</content>
+</settings>
